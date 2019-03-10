@@ -16,7 +16,6 @@ using namespace cv;
 int main() {
     int frames;
     int framesCounter = 0;
-    double timestamp = 0;
     Mat image;
     VideoCapture cap;
 
