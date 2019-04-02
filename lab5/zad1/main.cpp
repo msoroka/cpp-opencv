@@ -61,7 +61,7 @@ int main() {
         Sobel(gauss, sobelY, CV_32F, 0.0, 1.0, 3);
         threshold(sobelY, sobelYBin, thresholdSlider, 255, THRESH_BINARY);
 
-
+        // Gradient
         cartToPolar(sobelX, sobelY, gradient, angle, true);
         threshold(gradient, gradientBinary, thresholdSlider, 255, THRESH_BINARY);
 
@@ -70,6 +70,7 @@ int main() {
         cvtColor(gradientColoured, gradientColoured, COLOR_GRAY2BGR);
         gradientColoured.convertTo(gradientColoured, CV_8UC3, 255);
 
+        // Kolorowanie krawędzi
         for (int i = 0; i < gradient.rows; i++) {
             for (int j = 0; j < gradient.cols; j++) {
                 angleVal = angle.at<float>(i, j);
