@@ -56,6 +56,7 @@ int main() {
             stream.set(CAP_PROP_POS_FRAMES, 0);
             stream >> frame;
         }
+
         frame.copyTo(frameRGB);
         cvtColor(frameRGB, frameGrey, COLOR_BGR2GRAY);
 
