@@ -186,7 +186,7 @@ int main(int argc, char **argv) {
                 }
 
                 if(enableFaceSwapFromFile) {
-                    Mat fileFace = imread("/Users/msoroka/Desktop/uczelnia/obrazy/projekt/face.jpg");
+                    Mat fileFace = imread("/Users/msoroka/Desktop/uczelnia/obrazy/projekt/frame_0_0.jpg");
                     Mat fileFaceGray;
 
                     cvtColor(fileFace, fileFaceGray, COLOR_BGR2GRAY);
